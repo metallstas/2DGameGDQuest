@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceuti5ff37fgj"]
+[gd_scene load_steps=4 format=3 uid="uid://ceuti5ff37fgj"]
 
 [ext_resource type="PackedScene" uid="uid://brut205ffu5i8" path="res://Player/player.tscn" id="1_bk3v5"]
 [ext_resource type="PackedScene" uid="uid://tusxh031j5g3" path="res://Enviroment/pine_tree.tscn" id="2_1r4le"]
+[ext_resource type="PackedScene" uid="uid://d3kixqy287pct" path="res://Enemies/enemy.tscn" id="2_7raqb"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -13,7 +14,19 @@ offset_right = 1953.0
 offset_bottom = 1121.0
 
 [node name="player" parent="." instance=ExtResource("1_bk3v5")]
-position = Vector2(103, 141)
+position = Vector2(788, 481)
+
+[node name="Enemy" parent="." instance=ExtResource("2_7raqb")]
+position = Vector2(488, 274)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_7raqb")]
+position = Vector2(1133, 342)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_7raqb")]
+position = Vector2(1429, 613)
+
+[node name="Enemy4" parent="." instance=ExtResource("2_7raqb")]
+position = Vector2(1261, 987)
 
 [node name="PineTree" parent="." instance=ExtResource("2_1r4le")]
 position = Vector2(208, 778)
