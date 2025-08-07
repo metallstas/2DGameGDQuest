@@ -7,7 +7,7 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * SPEED
 	move_and_slide()
 	
-	var player = get_node("HappyBoo")
+	var player = %HappyBoo
 	
 	if velocity.length() > 0.0:
 		player.play_walk_animation()

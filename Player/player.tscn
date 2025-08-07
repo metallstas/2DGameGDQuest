@@ -7,10 +7,10 @@
 radius = 38.0132
 
 [node name="player" type="CharacterBody2D"]
-position = Vector2(74, 124)
 script = ExtResource("1_4ntmi")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_l8h54")]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -43)
