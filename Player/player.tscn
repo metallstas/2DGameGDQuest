@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://brut205ffu5i8"]
+[gd_scene load_steps=8 format=3 uid="uid://brut205ffu5i8"]
 
 [ext_resource type="Script" uid="uid://rjvn7xl1yvvn" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://assets/characters/happy_boo/happy_boo.tscn" id="1_l8h54"]
@@ -6,6 +6,20 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ntmi"]
 radius = 30.0167
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btcbx"]
+bg_color = Color(0.336608, 0.336608, 0.336608, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwnis"]
+bg_color = Color(0.290068, 0.720865, 0.205178, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_btcbx"]
 radius = 36.0139
@@ -21,6 +35,17 @@ position = Vector2(-2, -18)
 shape = SubResource("CircleShape2D_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="Camera2D"]
+unique_name_in_owner = true
+offset_left = -904.0
+offset_top = -492.0
+offset_right = -767.0
+offset_bottom = -464.0
+theme_override_styles/background = SubResource("StyleBoxFlat_btcbx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gwnis")
+value = 100.0
+show_percentage = false
 
 [node name="Gun" parent="." instance=ExtResource("3_btcbx")]
 position = Vector2(1, 0)
